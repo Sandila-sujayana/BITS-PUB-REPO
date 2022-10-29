@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>colour changing button</title>
+
+</head>
+<style>
+    .glow1 {
+        text-align: center;
+        color: blueviolet;
+        font-size: 100px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        text-transform: uppercase;
+        border: 30px solid rgb(22, 144, 243);
+        font-weight: 400;
+        width: 500px;
+        cursor: pointer;
+        border-radius: 100px;
+    }
+
+    .glow1:hover {
+
+        /* box-shadow: 0 0 20px 2px rgb(22, 144, 243) inset;; */
+        text-shadow: 1px 1px 10px rgb(193, 143, 240);
+    }
+</style>
+
+<body bgcolor=”#800000">
+    <div style="padding-left: 120px;">
+        <h1 style="color: white ;">we can change the border attributes such as colour ,boder width,border ETC...</h1>
+    </div>
+    <div class="glow1" id="id1"><a href="https://www.youtube.com/c/ACICTS">click here</a>
+    </div>
+    <div >
+        <h2 style="color: white ;">you can adjust button border dimentions(X,Y,D,M)</h2>
+    </div>
+    <div style="padding-top: 5px; color:white;">
+        x
+        <input onchange="foo1()" type="range" id="rx" name="points" min="0" max="10">y
+        <input onchange="foo1()" type="range" id="ry" name="points" min="0" max="10">d
+        <input onchange="foo1()" type="range" id="rd" name="points" min="0" max="50">m
+        <input onchange="foo1()" type="range" id="rm" name="points" min="0" max="50">
+    </div>
+    <div >
+        <h2 style="color: white ;">you can change the colour of border</h2>
+    </div>
+    <div style="padding-top: 5px; color:white;">
+        red
+        <input onchange="foo1()" type="range" id="red" name="points" min="0" max="255">green
+        <input onchange="foo1()" type="range" id="green" name="points" min="0" max="255">blue
+        <input onchange="foo1()" type="range" id="blue" name="points" min="0" max="255">
+
+
+    </div>
+    <script>
+        function foo1() {
+            var x1 = document.getElementById("rx").value;
+            var y1 = document.getElementById("ry").value;
+            var d1 = document.getElementById("rd").value;
+            var m1 = document.getElementById("rm").value;
+            var red1 = document.getElementById("red").value;
+            var green1 = document.getElementById("green").value;
+            var blue1 = document.getElementById("blue").value;
+            document.getElementById("id1").style.boxShadow = x1 + "px " + y1 + "px " + d1 + "px " + m1 + "px  rgb(" + red1 + ", " + green1 + ", " + blue1 + ")";
+            document.getElementById("id1").style.boxShadow = x1 + "px " + y1 + "px " + d1 + "px  rgb(" + red1 + ", " + green1 + ", " + blue1 + ")";
+
+        }
+    </script>
+</body>
+
+</html>
